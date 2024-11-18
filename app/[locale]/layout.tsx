@@ -23,7 +23,6 @@ export default async function LocaleLayout({
   }
 
   // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (
@@ -32,12 +31,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <NextTopLoader />
-            <div className="flex flex-col min-h-screen">
-              <TopBar />
-              <main className="flex-1 flex justify-center items-center text-center">
-                {children}
-              </main>
-            </div>
+            <TopBar />
+            <main className="flex justify-center">
+              <div className="w-5/6">{children}</div>
+            </main>
           </Providers>
         </NextIntlClientProvider>
       </body>

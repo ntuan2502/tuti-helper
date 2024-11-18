@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations();
   const [refreshKey, setRefreshKey] = useState(0);
 
   const handleRefresh = () => {
@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <div>
       <div>
-      {t('res')}: {screenWidth} x {screenHeight}
+      {t('resolutions')}: {screenWidth} x {screenHeight}
       </div>
       <Image
         src={`https://picsum.photos/${screenWidth}/${screenHeight}?refresh=${refreshKey}`}

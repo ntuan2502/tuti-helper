@@ -27,8 +27,10 @@ import {
 } from "./Icons";
 import Language from "./language";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function TopBar() {
+  const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLogin, setIsLogin] = useState<boolean>(false);
 
@@ -44,19 +46,6 @@ export default function TopBar() {
     user: <TagUser className="text-danger" fill="currentColor" size={30} />,
   };
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
-
   return (
     <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="md:hidden" justify="start">
@@ -65,17 +54,17 @@ export default function TopBar() {
         />
       </NavbarContent>
 
-      <NavbarContent className="md:hidden pr-3" justify="center">
+      <NavbarContent className="md:hidden" justify="center">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit"></p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex gap-4" justify="center">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit"></p>
         </NavbarBrand>
         <Dropdown>
           <NavbarItem>
@@ -136,8 +125,8 @@ export default function TopBar() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link href="/random-image" aria-current="page">
+            {t("random_image")}
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -208,24 +197,16 @@ export default function TopBar() {
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        <NavbarMenuItem>
+          <Link className="w-full" href="/random-image" size="lg">
+            {t("random_image")}
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link className="w-full" href="#" size="lg">
+            Test
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

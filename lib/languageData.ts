@@ -2,11 +2,11 @@ export const languageData = [
   {
     id: "vi",
     name: "Tiếng Việt",
-    avatar: "https://d2u8k2ocievbld.cloudfront.net/memojis/male/1.png",
+    avatar: "https://cdn-icons-png.flaticon.com/512/197/197473.png",
   },
   {
     id: "en",
     name: "English",
-    avatar: "https://d2u8k2ocievbld.cloudfront.net/memojis/female/1.png",
+    avatar: "https://cdn-icons-png.flaticon.com/512/197/197374.png",
   },
 ];
