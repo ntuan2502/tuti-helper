@@ -130,8 +130,8 @@ export default function TopBar() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="/convert-case">
+          {t("convert_case")}
           </Link>
         </NavbarItem>
       </NavbarContent>

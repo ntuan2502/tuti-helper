@@ -2,5 +2,15 @@
   "random_image": "Random image",
   "resolutions": "Resolutions",
   "width": "Width",
-  "height": "Height"
+  "height": "Height",
+  "convert_case": "Convert case",
+  "original_text": "Original text",
+  "converted_text": "Converted text",
+  "converted_text_placeholder": "The converted text will display here",
+  "enter_text": "Enter text",
+  "uppercase": "Upper case",
+  "lowercase": "Lower case",
+  "titlecase": "Title case",
+  "sentencecase": "Sentence case",
+  "capitalize": "Capitalize"
 }

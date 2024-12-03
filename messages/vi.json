@@ -2,5 +2,15 @@
   "random_image": "Hình ảnh ngẫu nhiên",
   "resolutions": "Độ phân giải",
   "width": "Chiều rộng",
-  "height": "Chiều cao"
+  "height": "Chiều cao",
+  "convert_case": "Chuyển đổi văn bản",
+  "original_text": "Văn bản gốc",
+  "converted_text": "Văn bản đã chuyển đổi",
+  "converted_text_placeholder": "Văn bản đã chuyển đổi sẽ hiển thị ở đây",
+  "enter_text": "Nhập văn bản",
+  "uppercase": "Chữ in hoa",
+  "lowercase": "Chữ thường",
+  "titlecase": "Chữ hoa đầu mỗi câu",
+  "sentencecase": "Chữ hoa đầu mỗi câu",
+  "capitalize": "Chữ cái đầu viết hoa"
 }
