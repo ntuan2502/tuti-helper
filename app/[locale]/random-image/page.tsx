@@ -21,14 +21,14 @@ export default function RandomImage() {
 
   return (
     <div className="flex flex-col items-center py-6">
-      <div className="mb-6 w-full max-w-lg">
+      <div className="mb-6 w-full max-w-lg md:flex">
         <Input
           type="number"
           label={t("width")}
           value={width}
           onChange={handleWidthChange}
           fullWidth
-          className="mb-4"
+          className="mb-4 md:px-4"
         />
         <Input
           type="number"
