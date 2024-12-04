@@ -1,9 +1,11 @@
 import "../globals.css";
+import "react-toastify/dist/ReactToastify.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Providers } from "./providers";
+import { ToastContainer } from "react-toastify";
 import NextTopLoader from "nextjs-toploader";
 import TopBar from "../../components/topbar";
 
@@ -30,6 +32,18 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <Providers>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+            />
             <NextTopLoader />
             <TopBar />
             <main className="flex justify-center">

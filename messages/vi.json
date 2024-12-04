@@ -10,5 +10,15 @@
   "enter_text": "Nhập văn bản",
   "uppercase": "Chữ in hoa",
   "lowercase": "Chữ thường",
-  "capitalize": "Chữ cái đầu viết hoa"
+  "capitalize": "Chữ cái đầu viết hoa",
+  "enter_id_number": "Nhập dãy số 12 chữ số",
+  "enter_number": "Nhập dãy số",
+  "province": "Tỉnh thành",
+  "gender": "Giới tính",
+  "year_of_birth": "Năm sinh",
+  "male": "Nam",
+  "female": "Nữ",
+  "not_found": "Không tìm thấy",
+  "id_error": "ID lỗi",
+  "check_id": "Kiểm tra CCCD"
 }

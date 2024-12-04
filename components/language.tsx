@@ -66,7 +66,6 @@ export default function Language() {
         <Button variant="bordered" className="capitalize">
           <Image
             src={selectedAvatar} // Use the avatar of the selected language
-            loading="lazy"
             alt="language"
             width={30}
           />
@@ -86,7 +85,6 @@ export default function Language() {
             <div className="flex items-center">
               <Image
                 src={language.avatar}
-                loading="lazy"
                 alt="language"
                 width={25}
               />

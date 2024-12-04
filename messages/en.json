@@ -10,5 +10,15 @@
   "enter_text": "Enter text",
   "uppercase": "Upper case",
   "lowercase": "Lower case",
-  "capitalize": "Capitalize"
+  "capitalize": "Capitalize",
+  "enter_id_number": "Enter a 12-digit number sequence",
+  "enter_number": "Enter number",
+  "province": "Province",
+  "gender": "Gender",
+  "year_of_birth": "Year of Birth",
+  "male": "Male",
+  "female": "Female",
+  "not_found": "Not found",
+  "id_error": "Id error",
+  "check_id": "Check ID number"
 }

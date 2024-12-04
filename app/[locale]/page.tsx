@@ -29,7 +29,6 @@ export default function HomePage() {
       </div>
       <Image
         src={`https://picsum.photos/${screenWidth}/${screenHeight}?refresh=${refreshKey}`}
-        loading="lazy"
         alt="picsum"
         onClick={handleRefresh}
       />

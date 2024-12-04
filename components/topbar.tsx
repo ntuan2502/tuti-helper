@@ -28,9 +28,11 @@ import {
 import Language from "./language";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 export default function TopBar() {
   const t = useTranslations();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isLogin, setIsLogin] = useState<boolean>(false);
 
@@ -56,15 +58,19 @@ export default function TopBar() {
 
       <NavbarContent className="md:hidden" justify="center">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit"></p>
+          <Link href="/" color="foreground">
+            <AcmeLogo />
+            <p className="font-bold text-inherit"></p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden md:flex gap-4" justify="center">
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit"></p>
+          <Link href="/" color="foreground">
+            <AcmeLogo />
+            <p className="font-bold text-inherit"></p>
+          </Link>
         </NavbarBrand>
         <Dropdown>
           <NavbarItem>
@@ -91,22 +97,25 @@ export default function TopBar() {
               key="autoscaling"
               description="ACME scales apps to meet user demand, automagically, based on load."
               startContent={icons.scale}
+              onClick={() => router.push("/random-image")}
             >
-              Autoscaling
+              {t("random_image")}
             </DropdownItem>
             <DropdownItem
               key="usage_metrics"
               description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
               startContent={icons.activity}
+              onClick={() => router.push("/convert-case")}
             >
-              Usage Metrics
+              {t("convert_case")}
             </DropdownItem>
             <DropdownItem
               key="production_ready"
               description="ACME runs on ACME, join us and others serving requests at web scale."
               startContent={icons.flash}
+              onClick={() => router.push("/check-id")}
             >
-              Production Ready
+              {t("check_id")}
             </DropdownItem>
             <DropdownItem
               key="99_uptime"
@@ -124,16 +133,16 @@ export default function TopBar() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem isActive>
+        {/* <NavbarItem isActive>
           <Link href="/random-image" aria-current="page">
             {t("random_image")}
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="/convert-case">
-          {t("convert_case")}
+            {t("convert_case")}
           </Link>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -198,13 +207,33 @@ export default function TopBar() {
 
       <NavbarMenu>
         <NavbarMenuItem>
-          <Link className="w-full" href="/random-image" size="lg">
+          <Link
+            className="w-full"
+            href="/random-image"
+            size="lg"
+            color="foreground"
+          >
             {t("random_image")}
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="#" size="lg">
-            Test
+          <Link
+            className="w-full"
+            href="/convert-case"
+            size="lg"
+            color="foreground"
+          >
+            {t("convert_case")}
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link
+            className="w-full"
+            href="/check-id"
+            size="lg"
+            color="foreground"
+          >
+            {t("check_id")}
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>

@@ -44,7 +44,6 @@ export default function RandomImage() {
         alt="Random Image"
         width={width}
         height={height}
-        loading="lazy"
         onClick={handleRefresh}
         className="rounded-lg shadow-lg cursor-pointer transition-transform duration-300 ease-in-out"
       />
