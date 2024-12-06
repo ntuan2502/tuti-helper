@@ -11,8 +11,7 @@ import { useState, useEffect } from "react";
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { languageData } from "../lib/languageData";
 
-// Import SharedSelection type from NextUI
-import { SharedSelection } from "@nextui-org/react"; // Ensure SharedSelection is imported from NextUI
+import { SharedSelection } from "@nextui-org/react";
 
 type LanguageType = {
   id: string;
@@ -24,12 +23,10 @@ export default function Language() {
   const pathname = usePathname();
   const router = useRouter();
   const params = useParams();
-  const locale = params.locale?.toString() || "vi"; // Default to "vi" if locale is not available
+  const locale = params.locale?.toString() || "vi";
 
-  // Initialize state for selected language ID
   const [selectedLanguageId, setSelectedLanguageId] = useState<string>(locale);
 
-  // Find selected language data based on the selected language ID
   const selectedLanguage = languageData.find(
     (lang) => lang.id === selectedLanguageId
   );
@@ -41,17 +38,13 @@ export default function Language() {
     ? selectedLanguage.avatar
     : languageData[0].avatar;
 
-  // Update the locale in the URL when selectedLanguageId changes
   useEffect(() => {
-    // Only update the URL if the selected language changes
     if (selectedLanguageId !== locale) {
-      router.push("/" + selectedLanguageId + pathname.slice(3)); // Navigate to the new URL with the selected language
+      router.push("/" + selectedLanguageId + pathname.slice(3));
     }
   }, [selectedLanguageId, router, pathname, locale]);
 
-  // Handle selection change
   const handleSelectionChange = (keys: SharedSelection) => {
-    // Convert the key(s) to string if it's not already a string
     const newSelectedLanguageId =
       typeof keys === "string" ? keys : [...keys][0].toString();
 
@@ -83,11 +76,7 @@ export default function Language() {
         {languageData.map((language: LanguageType) => (
           <DropdownItem key={language.id}>
             <div className="flex items-center">
-              <Image
-                src={language.avatar}
-                alt="language"
-                width={25}
-              />
+              <Image src={language.avatar} alt="language" width={25} />
               <p className="mx-2">{language.name}</p>
             </div>
           </DropdownItem>

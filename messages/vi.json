@@ -1,9 +1,11 @@
 {
   "random_image": "Hình ảnh ngẫu nhiên",
+  "random_image_details": "Tạo hình ảnh dựa trên chiều dài và chiều rộng",
   "resolutions": "Độ phân giải",
   "width": "Chiều rộng",
   "height": "Chiều cao",
   "convert_case": "Chuyển đổi văn bản",
+  "convert_case_details": "Chuyển đổi văn bản",
   "original_text": "Văn bản gốc",
   "converted_text": "Văn bản đã chuyển đổi",
   "converted_text_placeholder": "Văn bản đã chuyển đổi sẽ hiển thị ở đây",
@@ -20,5 +22,7 @@
   "female": "Nữ",
   "not_found": "Không tìm thấy",
   "id_error": "ID lỗi",
-  "check_id": "Kiểm tra CCCD"
+  "check_id": "Kiểm tra CCCD",
+  "check_id_details": "Kiểm tra thông tin trên CCCD",
+  "error": "Lỗi:"
 }

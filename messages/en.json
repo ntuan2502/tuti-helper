@@ -1,9 +1,11 @@
 {
   "random_image": "Random image",
+  "random_image_details": "Create an image based on length and width",
   "resolutions": "Resolutions",
   "width": "Width",
   "height": "Height",
   "convert_case": "Convert case",
+  "convert_case_details": "Text transform",
   "original_text": "Original text",
   "converted_text": "Converted text",
   "converted_text_placeholder": "The converted text will display here",
@@ -20,5 +22,7 @@
   "female": "Female",
   "not_found": "Not found",
   "id_error": "Id error",
-  "check_id": "Check ID number"
+  "check_id": "Check ID number",
+  "check_id_details": "Check information on ID card",
+  "error": "Error:"
 }

@@ -19,12 +19,10 @@ export default async function LocaleLayout({
   params: Params;
 }) {
   const { locale } = await params;
-  // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale)) {
     notFound();
   }
 
-  // Providing all messages to the client
   const messages = await getMessages();
 
   return (

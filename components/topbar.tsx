@@ -95,7 +95,7 @@ export default function TopBar() {
           >
             <DropdownItem
               key="autoscaling"
-              description="ACME scales apps to meet user demand, automagically, based on load."
+              description={t("random_image_details")}
               startContent={icons.scale}
               onClick={() => router.push("/random-image")}
             >
@@ -103,7 +103,7 @@ export default function TopBar() {
             </DropdownItem>
             <DropdownItem
               key="usage_metrics"
-              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              description={t("convert_case_details")}
               startContent={icons.activity}
               onClick={() => router.push("/convert-case")}
             >
@@ -111,7 +111,7 @@ export default function TopBar() {
             </DropdownItem>
             <DropdownItem
               key="production_ready"
-              description="ACME runs on ACME, join us and others serving requests at web scale."
+              description={t("check_id_details")}
               startContent={icons.flash}
               onClick={() => router.push("/check-id")}
             >
